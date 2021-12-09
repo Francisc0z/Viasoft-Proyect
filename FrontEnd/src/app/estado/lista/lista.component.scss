@@ -1,0 +1,95 @@
+.tbl{
+    display: flex;
+    justify-content: center;
+    
+}
+table{
+    margin-top: 2rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: solid black 1px;
+    thead{
+        tr {
+            height: 60px;
+            font-size: 16px;
+        }
+    } 
+    tr{
+        border-bottom:solid black 1px;
+        text-align: center;
+        margin: -1x;
+        padding: -1px;
+    }
+    tbody{
+        tr:hover{
+        border-bottom:solid black 1px;
+        text-align: center;
+        background-color: rgba(129, 125, 125, 0.486);
+        }
+    }
+    
+}
+.p-calendar{
+    margin-left: 1rem;
+}
+.seccion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .grafico{
+        .textoh{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            height: 4rem;
+            background-color: #0275d8;
+            p{
+            
+                font-size: larger;
+                font-weight: 600;
+                color: white;
+                
+                
+            }
+        }
+    
+        width: 35%;
+        height: auto;
+        margin: 2rem;
+    }
+    .texto{
+        width: 55%;
+        height: auto;
+        .textoh{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            height: 4rem;
+            background-color: #0275d8;
+            p{
+            
+                font-size: larger;
+                font-weight: 600;
+                color: white;
+                
+                
+            }
+        }
+    }
+}
+
+.p-inputtext{
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.p-inputtext:enabled:hover {
+    border-color: #1ABC9C;
+}
+.p-inputtext:enabled:active {
+    border-color: #1ABC9C;
+}

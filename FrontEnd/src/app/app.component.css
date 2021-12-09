@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.cuerpo {
+  background: url(../assets/blob.svg) no-repeat fixed left top;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.header h1 {
+  color: black;
+}
+
+.header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.header ul li {
+  list-style: none;
+}
+
+.header ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.header ul li a:hover {
+  text-decoration: underline;
+  color: rgba(59, 57, 57, 0.726);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.cuerpo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.cuerpo .contenedor {
+  margin-top: 6rem;
+}
+
+.cuerpo .contenedor p {
+  font-size: 2rem;
+}
+
+.cuerpo .grafico {
+  margin-top: 6rem;
+  width: 25%;
+}
+
+.cuerpo .grafico p {
+  text-align: center;
+  font-size: 2rem;
+}
+
+footer {
+  width: 100%;
+  margin: 0px;
+  height: 8rem;
+  background-color: gray;
+}
+/*# sourceMappingURL=app.component.css.map */

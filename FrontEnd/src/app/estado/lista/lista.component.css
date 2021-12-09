@@ -1,0 +1,122 @@
+.tbl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+table {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: solid black 1px;
+}
+
+table thead tr {
+  height: 60px;
+  font-size: 16px;
+}
+
+table tr {
+  border-bottom: solid black 1px;
+  text-align: center;
+  margin: -1x;
+  padding: -1px;
+}
+
+table tbody tr:hover {
+  border-bottom: solid black 1px;
+  text-align: center;
+  background-color: rgba(129, 125, 125, 0.486);
+}
+
+.p-calendar {
+  margin-left: 1rem;
+}
+
+.seccion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.seccion .grafico {
+  width: 35%;
+  height: auto;
+  margin: 2rem;
+}
+
+.seccion .grafico .textoh {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 4rem;
+  background-color: #0275d8;
+}
+
+.seccion .grafico .textoh p {
+  font-size: larger;
+  font-weight: 600;
+  color: white;
+}
+
+.seccion .texto {
+  width: 55%;
+  height: auto;
+}
+
+.seccion .texto .textoh {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 4rem;
+  background-color: #0275d8;
+}
+
+.seccion .texto .textoh p {
+  font-size: larger;
+  font-weight: 600;
+  color: white;
+}
+
+.p-inputtext {
+  -webkit-transition: background-color 0.2s, color 0.2s, border-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
+.p-inputtext:enabled:hover {
+  border-color: #1ABC9C;
+}
+
+.p-inputtext:enabled:active {
+  border-color: #1ABC9C;
+}
+/*# sourceMappingURL=lista.component.css.map */

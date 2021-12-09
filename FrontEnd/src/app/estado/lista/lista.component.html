@@ -1,0 +1,496 @@
+<p-progressSpinner *ngIf="loading" [style]="{width: '150px', height: '150px'}" styleClass="custom-spinner" strokeWidth="2" fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner>
+<p-card *ngIf="bool" class="tbl">
+    <h1 *ngFor="let estado of estados">Estado de los servicion Brasil en la fecha de {{estado.fecha}}</h1>
+    <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input type="text" pInputText placeholder="Buscar" name="filtroEstados" (keyup)="searchEstado()" [(ngModel)]="searchText">       
+    </span>
+    <p-calendar  placeholder="Fecha" [(ngModel)]="dateValue" [touchUI]="true" [readonlyInput]="true"></p-calendar>
+    <table>
+        <thead>
+            <tr>
+                <th *ngFor="let titulo of titles let i = index">
+                    {{titulo}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let estado of estadosFiltrados">
+                <td>
+                    <span>{{estado.texto.substr(0,2)}}</span> 
+                </td>
+                <td>
+                    <img [src]="url+estado.columna1.substr(10,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna2.substr(10,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna3.substr(10,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna4.substr(10,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna5.substr(10,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    {{estado.columna6.substr(0,5)}}
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    <img [src]="url+estado.columna8.substr(10,24)" style="width: 1rem;">
+                </td>
+                <td>
+                
+                </td>
+            </tr>
+            <tr *ngFor="let estado of estadosFiltrados2">
+                <td>
+                <span>{{estado.texto.substr(3,3)}}</span> 
+                </td>
+                <td>
+                    <img [src]="url+estado.columna1.substr(47,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna2.substr(47,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna3.substr(47,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna4.substr(47,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna5.substr(47,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    {{estado.columna6.substr(0,5)}}
+                </td>
+                <td>
+                    <img [src]="url+estado.columna7.substr(61,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna8.substr(47,24)" style="width: 1rem;">
+                </td>
+            </tr>
+            <tr *ngFor="let estado of estadosFiltrados3">
+                <td>
+                <span>{{estado.texto.substr(5,4)}}</span> 
+                </td>
+                <td>
+                    <img [src]="url+estado.columna1.substr(84,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna2.substr(84,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna3.substr(84,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna4.substr(84,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna5.substr(84,24)" style="width: 1rem;">
+                </td>
+                <td>
+                {{estado.columna6.substr(4,5)}}    
+            </td>
+                <td>
+                    <img [src]="url+estado.columna7.substr(98,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna8.substr(84,24)" style="width: 1rem;">
+                </td>
+            </tr>
+            <tr *ngFor="let estado of estadosFiltrados4">
+                <td>
+                <span>{{estado.texto.substr(9,2)}}</span> 
+                </td>
+                <td>
+                    <img [src]="url+estado.columna1.substr(121,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna2.substr(121,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna3.substr(121,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna4.substr(121,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna5.substr(121,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    {{estado.columna6.substr(4,5)}}
+                </td>
+                <td>
+                    <img [src]="url+estado.columna7.substr(135,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna8.substr(121,24)" style="width: 1rem;">
+                </td>
+            </tr>
+            <tr *ngFor="let estado of estadosFiltrados5">
+                <td>
+                <span>{{estado.texto.substr(12,2)}}</span> 
+                </td>
+                <td>
+                    <img [src]="url+estado.columna1.substr(158,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna2.substr(158,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna3.substr(158,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna4.substr(158,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna5.substr(158,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    {{estado.columna6.substr(4,5)}}
+                </td>
+                <td>
+                    <img [src]="url+estado.columna7.substr(172,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna8.substr(158,24)" style="width: 1rem;">
+                </td>
+            </tr>
+            <tr *ngFor="let estado of estadosFiltrados6">
+                <td>
+                <span>{{estado.texto.substr(15,2)}}</span> 
+                </td>
+                <td>
+                    <img [src]="url+estado.columna1.substr(195,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna2.substr(195,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna3.substr(195,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna4.substr(195,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna5.substr(195,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    {{estado.columna6.substr(4,5)}}
+                </td>
+                <td>
+                    <img [src]="url+estado.columna7.substr(209,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna8.substr(195,24)" style="width: 1rem;">
+                </td>
+            </tr>
+            <tr *ngFor="let estado of estadosFiltrados7">
+                <td>
+                <span>{{estado.texto.substr(18,2)}}</span> 
+                </td>
+                <td>
+                    <img [src]="url+estado.columna1.substr(232,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna2.substr(232,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna3.substr(232,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna4.substr(232,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna5.substr(232,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    {{estado.columna6.substr(4,5)}}
+                </td>
+                <td>
+                    <img [src]="url+estado.columna7.substr(246,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna8.substr(232,24)" style="width: 1rem;">
+                </td>
+            </tr>
+            <tr *ngFor="let estado of estadosFiltrados8">
+                <td>
+                <span>{{estado.texto.substr(21,2)}}</span> 
+                </td>
+                <td>
+                    <img [src]="url+estado.columna1.substr(269,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna2.substr(269,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna3.substr(269,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna4.substr(269,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna5.substr(269,24)" style="width: 1rem;">
+                </td>
+                <td>
+                {{estado.columna6.substr(4,5)}}
+                </td>
+                <td>
+                    <img [src]="url+estado.columna7.substr(283,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna8.substr(269,24)" style="width: 1rem;">
+                </td>
+            </tr>
+            <tr *ngFor="let estado of estadosFiltrados9">
+                <td>
+                <span>{{estado.texto.substr(24,2)}}</span> 
+                </td>
+                <td>
+                    <img [src]="url+estado.columna1.substr(306,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna2.substr(306,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna3.substr(306,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna4.substr(306,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna5.substr(306,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    {{estado.columna6.substr(4,5)}}
+                </td>
+                <td>
+                    <img [src]="url+estado.columna7.substr(320,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna8.substr(306,24)" style="width: 1rem;">
+                </td>
+            </tr>
+            <tr *ngFor="let estado of estadosFiltrados10">
+                <td>
+                <span>{{estado.texto.substr(27,2)}}</span> 
+                </td>
+                <td>
+                    <img [src]="url+estado.columna1.substr(343,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna2.substr(343,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna3.substr(343,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna4.substr(343,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna5.substr(343,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    {{estado.columna6.substr(4,5)}}
+                </td>
+                <td>
+                    <img [src]="url+estado.columna7.substr(357,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna8.substr(343,24)" style="width: 1rem;">
+                </td>
+            </tr>
+            <tr *ngFor="let estado of estadosFiltrados11">
+                <td>
+                <span>{{estado.texto.substr(30,2)}}</span> 
+                </td>
+                <td>
+                    <img [src]="url+estado.columna1.substr(380,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna2.substr(380,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna3.substr(380,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna4.substr(380,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna5.substr(380,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    {{estado.columna6.substr(4,5)}}
+                </td>
+                <td>
+                    <img [src]="url+estado.columna7.substr(408,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna8.substr(380,24)" style="width: 1rem;">
+                </td>
+            </tr>
+            <tr *ngFor="let estado of estadosFiltrados12">
+                <td>
+                <span>{{estado.texto.substr(33,4)}}</span> 
+                </td>
+                <td>
+                    <img [src]="url+estado.columna1.substr(417,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna2.substr(417,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna3.substr(417,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna4.substr(417,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna5.substr(417,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    {{estado.columna6.substr(4,5)}}
+                </td>
+                <td>
+                </td>
+                <td>
+                    <img [src]="url+estado.columna8.substr(417,24)" style="width: 1rem;">
+                </td>
+            </tr>
+            <tr *ngFor="let estado of estadosFiltrados13">
+                <td>
+                <span>{{estado.texto.substr(38,4)}}</span> 
+                </td>
+                <td>
+                    <img [src]="url+estado.columna1.substr(454,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna2.substr(454,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna3.substr(454,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna4.substr(454,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna5.substr(454,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    {{estado.columna6.substr(4,5)}}
+                </td>
+                <td>
+                    <img [src]="url+estado.columna7.substr(320 ,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna8.substr(454,24)" style="width: 1rem;">
+                </td>
+            </tr>
+            <tr *ngFor="let estado of estadosFiltrados14">
+                <td>
+                <span>{{estado.texto.substr(43,6)}}</span> 
+                </td>
+                <td>
+                    <img [src]="url+estado.columna1.substr(491,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna2.substr(491,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna3.substr(491,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna4.substr(491,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna5.substr(491,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    {{estado.columna6.substr(4,5)}}
+                </td>
+                <td>
+                </td>
+                <td>
+                    <img [src]="url+estado.columna8.substr(491,24)" style="width: 1rem;">
+                </td>
+            </tr>
+            <tr *ngFor="let estado of estadosFiltrados15">
+                <td>
+                <span>{{estado.texto.substr(50,200)}}</span> 
+                </td>
+                <td>
+                    <img [src]="url+estado.columna1.substr(528,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna2.substr(528,24)" style="width: 1rem;">
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    <img [src]="url+estado.columna4.substr(528,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    <img [src]="url+estado.columna5.substr(528,24)" style="width: 1rem;">
+                </td>
+                <td>
+                    {{estado.columna6.substr(4,5)}}
+                </td>
+                <td>
+                </td>
+                <td>
+                    <img [src]="url+estado.columna8.substr(528,24)" style="width: 1rem;">
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</p-card>
+<div *ngIf="bool" class="seccion">
+    <div class="grafico">
+        <p-card>
+            <ng-template pTemplate="header">
+                <div class="textoh">
+                    <p>Estados con mas indisponibilidades</p> 
+                </div>
+            </ng-template>
+            <p-chart type="doughnut" [data]="data"></p-chart>
+        </p-card>
+    </div>
+    <div  class="texto">
+        <p-card>
+            <ng-template pTemplate="header">
+                <div class="textoh">
+                    <p>{{texto | uppercase }}</p> 
+                </div>
+            </ng-template>
+            *SVAN - Sefaz Virtual Ambiente Nacional *SVRS - Sefaz Virtual Rio Grande do Sul *SVC - Sefaz Virtual de Contingência
+            UF que utilizam a SVAN - Sefaz Virtual do Ambiente Nacional: MA <br>
+            UF que utilizam a SVRS - Sefaz Virtual do RS: <br>
+            - Para serviço de Consulta Cadastro: AC, ES, RN, PB, SC <br>
+            - Para demais serviços relacionados com o sistema da NF-e: AC, AL, AP, DF, ES, PA, PB, PI, RJ, RN, RO, RR, SC, SE, TO
+            Autorizadores em contingência:<br>
+            - UF que utilizam a SVC-AN - Sefaz Virtual de Contingência Ambiente Nacional: AC, AL, AP, DF, ES, MG, PA, PB, PI, RJ, RN, RO, RR, RS, SC, SE, SP, TO<br>
+            - UF que utilizam a SVC-RS - Sefaz Virtual de Contingência Rio Grande do Sul: AM, BA, CE, GO, MA, MS, MT, PE, PR<br>
+            <br>
+            Verificados através de conexões via Internet, as consultas aos serviços são feitas a intervalos regulares, variando com a estabilidade da rede e disponibilidade dos serviços. O Tempo Médio em segundos, extraido do Status do Serviço, indica a média da performance do serviço de processamento dos lotes NFe nos últimos 5 minutos (NI = não informado). <br><br>
+            <img src="../../../assets/imagens/bola_vermelho_G.png" style="width: 1rem; margin-right: 5px;">Vermelho: quando há respostas negativas seguidas para uma consulta (falta Serviço ou falha de conexão).
+            Ocorre após o Amarelo. <br>
+            Havendo uma resposta positiva a qualquer momento, o estado Verde é retomado.<br>
+            <img src="../../../assets/imagens/bola_amarela_G.png" style="width: 1rem; margin-right: 5px;">Amarelo: a consulta retornou a primeira resposta negativa (falta Serviço ou falha de conexão).<br>
+            Ocorre após o Verde, permanecendo por até 10 minutos.<br>
+             Nesse estágio, uma resposta positiva à consulta retorna o estado para Verde.<br>
+            As respostas negativas, ao final do tempo, evoluem o estado para Vermelho.<br>
+            <img src="../../../assets/imagens/bola_verde_P.png" style="width: 1rem; margin-right: 5px;">Verde: a consulta retornou resposta positiva.<br>
+            Ocorre após qualquer estágio.
+        </p-card>
+    </div>
+</div>

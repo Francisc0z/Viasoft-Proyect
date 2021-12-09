@@ -1,0 +1,79 @@
+.custom-spinner {
+  top: 50%;
+}
+
+@-webkit-keyframes custom-progress-spinner-color {
+  100%,
+  0% {
+    stroke: #00c4eb;
+  }
+  40% {
+    stroke: #b54848;
+  }
+  66% {
+    stroke: #69046d;
+  }
+  80%,
+  90% {
+    stroke: #FFA62B;
+  }
+}
+
+@keyframes custom-progress-spinner-color {
+  100%,
+  0% {
+    stroke: #00c4eb;
+  }
+  40% {
+    stroke: #b54848;
+  }
+  66% {
+    stroke: #69046d;
+  }
+  80%,
+  90% {
+    stroke: #FFA62B;
+  }
+}
+
+@-webkit-keyframes custom-progress-spinner-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@keyframes custom-progress-spinner-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+.p-card {
+  color: #495057;
+  -webkit-box-shadow: -2px 2px 5px -1px rgba(0, 0, 0, 0.59);
+          box-shadow: -2px 2px 5px -1px rgba(0, 0, 0, 0.59);
+  border-radius: 6px;
+}
+
+.p-calendar {
+  margin-left: 1rem;
+}
+/*# sourceMappingURL=styles.css.map */
